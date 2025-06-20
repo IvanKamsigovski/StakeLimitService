@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "H1vlGhIsVIVR+c9bCbDZfsLxFdnL+yDfqSGS0cQgp48=",
+  "Source": "StakeLimit.Presentation.Api",
+  "BasePath": "_content/StakeLimit.Presentation.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

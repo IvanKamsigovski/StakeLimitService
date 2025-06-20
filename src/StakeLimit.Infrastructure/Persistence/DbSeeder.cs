@@ -1,5 +1,8 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using StakeLimit.Data;
-using StakeLimit.Enteties;
+using StakeLimit.Entities;
 
 public static class DbSeeder
 {
@@ -33,11 +36,12 @@ public static class DbSeeder
                         Id = Guid.NewGuid(),
                         DeviceId = device.DeviceId,
                         Stake = random.Next(10, 300),
-                        CreatedAt = now.AddSeconds(-random.Next(0, device.TimeDuration + 600))
+                        CreatedAt = now.AddSeconds(-random.Next(0, Math.Max(1, device.TimeDuration + 600)))
                     }).ToList();
 
                 context.Tickets.AddRange(tickets);
             }
+
 
             await context.SaveChangesAsync();
         }

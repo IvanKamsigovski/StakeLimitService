@@ -8,7 +8,7 @@ using StakeLimit.Data;
 
 #nullable disable
 
-namespace StakeLimit.Migrations
+namespace StakeLimit.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
     partial class ApplicationDBContextModelSnapshot : ModelSnapshot
@@ -22,13 +22,13 @@ namespace StakeLimit.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("api.Enteties.Device", b =>
+            modelBuilder.Entity("StakeLimit.Entities.Device", b =>
                 {
                     b.Property<Guid>("DeviceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime?>("BlockedUntil")
+                    b.Property<DateTime?>("BlockedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("HotPercentage")
@@ -48,10 +48,10 @@ namespace StakeLimit.Migrations
 
                     b.HasKey("DeviceId");
 
-                    b.ToTable("Devices", (string)null);
+                    b.ToTable("Devices");
                 });
 
-            modelBuilder.Entity("api.Enteties.Ticket", b =>
+            modelBuilder.Entity("StakeLimit.Entities.Ticket", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,7 +68,7 @@ namespace StakeLimit.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tickets", (string)null);
+                    b.ToTable("Tickets");
                 });
 #pragma warning restore 612, 618
         }

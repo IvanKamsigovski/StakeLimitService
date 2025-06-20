@@ -1,17 +1,21 @@
 
 using StakeLimit.Data;
 using StakeLimit.Dtos.Devices;
-using StakeLimit.Enteties;
+using StakeLimit.Entities;
 using StakeLimit.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace StakeLimit.Repositories
 {
     public class DeviceRepository : IDeviceRepository
     {
         public readonly ApplicationDBContext _context;
-        private IDbContextTransaction _currentTransaction;
+        private IDbContextTransaction? _currentTransaction;
 
         public DeviceRepository(ApplicationDBContext context)
         {

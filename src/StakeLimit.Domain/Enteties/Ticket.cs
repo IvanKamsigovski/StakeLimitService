@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace StakeLimit.Enteties
+namespace StakeLimit.Entities
 {
     public class Ticket
     {

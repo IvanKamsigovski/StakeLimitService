@@ -1,4 +1,4 @@
-using StakeLimit.Enteties;
+using StakeLimit.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace StakeLimit.Data

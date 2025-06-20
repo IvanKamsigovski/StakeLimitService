@@ -1,7 +1,10 @@
-using StakeLimit.Enteties;
+using StakeLimit.Entities;
 using StakeLimit.Interfaces;
 using StakeLimit.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using System;
+using System.Linq;
 
 namespace StakeLimit.Repositories
 {
